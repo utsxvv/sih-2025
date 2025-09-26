@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<h2 class="text-3xl font-bold text-gray-800">Dashboard</h2>
+<p class="text-gray-500 mt-1 mb-6">Overview of your timetable management system</p>
+
+<!-- Stats Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+        <div class="flex items-center justify-between">
+            <h3 class="text-gray-500">Total Classes</h3>
+            <svg class="w-6 h-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+        </div>
+        <p class="text-3xl font-bold text-gray-800 mt-2">0</p>
+        <p class="text-sm text-gray-500">Required per week</p>
+    </div>
+    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+        <div class="flex items-center justify-between">
+            <h3 class="text-gray-500">Active Faculties</h3>
+             <svg class="w-6 h-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <p class="text-3xl font-bold text-gray-800 mt-2">0</p>
+        <p class="text-sm text-gray-500">Available for scheduling</p>
+    </div>
+     <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+        <div class="flex items-center justify-between">
+            <h3 class="text-gray-500">Subjects</h3>
+             <svg class="w-6 h-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+        </div>
+        <p class="text-3xl font-bold text-gray-800 mt-2">00</p>
+        <p class="text-sm text-gray-500">Across all departments</p>
+    </div>
+     <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+        <div class="flex items-center justify-between">
+            <h3 class="text-gray-500">Classrooms</h3>
+            <svg class="w-6 h-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <p class="text-3xl font-bold text-gray-800 mt-2">0</p>
+        <p class="text-sm text-gray-500">Total capacity: 0</p>
+    </div>
+</div>
+
+<!-- Quick Actions & Timetable Generation -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6">
+    <div class="lg:col-span-2 bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+         <h3 class="text-lg font-semibold text-gray-800">Quick Actions</h3>
+        <p class="text-gray-500 mb-4">Manage your timetable system components</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <button class="bg-emerald-50 text-emerald-800 font-medium p-4 rounded-lg flex items-center justify-center hover:bg-emerald-100 transition-colors">
+                <svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                Manage Faculties
+            </button>
+            <button class="bg-emerald-50 text-emerald-800 font-medium p-4 rounded-lg flex items-center justify-center hover:bg-emerald-100 transition-colors">
+                <svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+                Manage Subjects
+            </button>
+            <button class="bg-emerald-50 text-emerald-800 font-medium p-4 rounded-lg flex items-center justify-center hover:bg-emerald-100 transition-colors">
+                <svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                Manage Classrooms
+            </button>
+            <button class="bg-emerald-50 text-emerald-800 font-medium p-4 rounded-lg flex items-center justify-center hover:bg-emerald-100 transition-colors">
+                <svg class="w-6 h-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="m3.27 6.96 8.73 5.05 8.73-5.05"/><path d="M12 22.08V12"/></svg>
+                Manage Batches
+            </button>
+        </div>
+    </div>
+    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+        <h3 class="text-lg font-semibold text-gray-800">Timetable Generation</h3>
+        <p class="text-gray-500 mb-4">Generate and manage class schedules</p>
+        <div class="text-sm text-gray-500 flex items-center mb-6">
+            <svg class="w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Last generated: Never
+        </div>
+        <button class="w-full bg-green-700 text-white font-bold py-3 px-4 rounded-lg hover:bg-green-800 transition-colors">Generate New Timetable</button>
+        <button class="w-full bg-gray-100 text-gray-700 font-medium py-3 px-4 rounded-lg hover:bg-gray-200 transition-colors mt-2">View Current Schedules</button>
+    </div>
+</div>
+{% endblock %}

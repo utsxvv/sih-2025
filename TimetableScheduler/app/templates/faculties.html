@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block title %}Faculties{% endblock %}
+
+{% block content %}
+<h2 class="text-3xl font-bold text-gray-800">Faculties</h2>
+<p class="text-gray-500 mt-1 mb-6">Manage faculties in your system</p>
+<div class="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
+    <h3 class="text-lg font-semibold text-gray-800">Add New Faculty</h3>
+    <p class="text-gray-500 mb-6">Enter faculty details and availability constraints</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+            <label class="block text-sm font-medium text-gray-700">Full Name</label>
+            <input type="text" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500 sm:text-sm">
+        </div>
+        <div>
+            <label class="block text-sm font-medium text-gray-700">Email Address</label>
+            <input type="email" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500 sm:text-sm">
+        </div>
+         <div>
+            <label class="block text-sm font-medium text-gray-700">Department</label>
+            <input type="text" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500 sm:text-sm">
+        </div>
+        <div>
+            <label class="block text-sm font-medium text-gray-700">Phone Number</label>
+            <input type="tel" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500 sm:text-sm">
+        </div>
+        <div class="md:col-span-2">
+            <label class="block text-sm font-medium text-gray-700">Max Classes Per Day</label>
+            <input type="number" value="5" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-green-500 focus:ring-green-500 sm:text-sm">
+        </div>
+    </div>
+    <div class="mt-6">
+        <h4 class="text-md font-medium text-gray-700 mb-2 flex items-center">
+            <svg class="w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Weekly Availability
+        </h4>
+        <div class="space-y-4">
+            <!-- Day availability -->
+            <div class="flex items-center space-x-4 p-3 bg-gray-50 rounded-lg">
+               <input id="monday-check" type="checkbox" checked class="h-5 w-5 rounded border-gray-300 text-green-600 focus:ring-green-500">
+               <label for="monday-check" class="font-medium text-gray-700 w-28">Monday</label>
+               <input type="time" value="09:00" class="block w-full rounded-md border-gray-300 shadow-sm sm:text-sm">
+               <span class="text-gray-500">to</span>
+               <input type="time" value="17:00" class="block w-full rounded-md border-gray-300 shadow-sm sm:text-sm">
+               <button class="text-gray-400 hover:text-red-500"><svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="m15 9-6 6" /><path d="m9 9 6 6" /></svg></button>
+            </div>
+             <!-- Repeat for other days -->
+            <div class="flex items-center space-x-4 p-3 bg-gray-50 rounded-lg">
+               <input id="tuesday-check" type="checkbox" checked class="h-5 w-5 rounded border-gray-300 text-green-600 focus:ring-green-500">
+               <label for="tuesday-check" class="font-medium text-gray-700 w-28">Tuesday</label>
+               <input type="time" value="09:00" class="block w-full rounded-md border-gray-300 shadow-sm sm:text-sm">
+               <span class="text-gray-500">to</span>
+               <input type="time" value="17:00" class="block w-full rounded-md border-gray-300 shadow-sm sm:text-sm">
+               <button class="text-gray-400 hover:text-red-500"><svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="m15 9-6 6" /><path d="m9 9 6 6" /></svg></button>
+            </div>
+            <div class="flex items-center space-x-4 p-3 bg-gray-50 rounded-lg">
+               <input id="saturday-check" type="checkbox" class="h-5 w-5 rounded border-gray-300 text-green-600 focus:ring-green-500">
+               <label for="saturday-check" class="font-medium text-gray-400 w-28">Saturday</label>
+            </div>
+             <div class="flex items-center space-x-4 p-3 bg-gray-50 rounded-lg">
+               <input id="sunday-check" type="checkbox" class="h-5 w-5 rounded border-gray-300 text-green-600 focus:ring-green-500">
+               <label for="sunday-check" class="font-medium text-gray-400 w-28">Sunday</label>
+            </div>
+        </div>
+    </div>
+    <div class="mt-8">
+         <button class="inline-flex items-center bg-green-700 text-white font-bold py-2 px-4 rounded-lg hover:bg-green-800 transition-colors">
+            <svg class="w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+            Add Faculty
+        </button>
+    </div>
+</div>
+ <div class="bg-white p-8 mt-6 rounded-xl shadow-sm border border-gray-200">
+     <h3 class="text-lg font-semibold text-gray-800">Faculty List</h3>
+    <p class="text-gray-500">Manage existing faculty members</p>
+    <!-- Placeholder for faculty list table -->
+ </div>
+{% endblock %}
